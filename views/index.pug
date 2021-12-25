@@ -1,0 +1,23 @@
+extends layout
+block content
+  div(class='flex-parent')
+    div(class='flex-child')
+      h1 Resume Screener
+      h3 Enter the data from your resume below:
+      form(action='/', method='POST', id="screener-form")
+        p
+          | Resume:
+          br
+          textarea(form="screener-form", name="resume", id='resume', placeholder='Enter your resume in text form here', required)=resume
+          br
+          br
+          button(class='pure-material-button-contained' type='submit') Submit
+    div(class='flex-child', id='result')
+      h1 Screening Result:
+      h1=result 
+      h1=title
+      h2=result1
+      h2=result2
+      h2=result3
+      h2=result4
+      h2=result5 
