@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
                         result5: '' });
 });
 
-router.use(express.urlencoded());
+router.use(express.urlencoded({ extended: true }))
 router.use(express.json());
 
 /* POST to get screening result */
